@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+      <h1>TaskFlow<span>.</span></h1>
+      <p class="subtitle">Small steps. Big progress.</p>
+    </header>
+
+    <section class="task-panel" aria-label="Task manager">
+      <form id="task-form">
+        <label for="task-input">What needs to get done?</label>
+        <div class="input-row">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Enter your next task..."
+            maxlength="150"
+            autocomplete="off"
+            required
+          >
+          <button type="submit" class="add-button">+ Add</button>
+        </div>
+      </form>
+
+      <div class="task-summary">
+        <span id="task-count">0 tasks remaining</span>
+        <button id="clear-completed" class="text-button" type="button">
+          Clear completed
+        </button>
+      </div>
+
+      <ul id="task-list" aria-live="polite"></ul>
+
+      <p id="empty-message" class="empty-message">
+        You're all caught up! Add a task to get started.
+      </p>
+    </section>
+
+    <footer>
+      Built with HTML, CSS & JavaScript
+    </footer>
+  </main>
+</body>
+</html>
